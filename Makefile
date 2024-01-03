@@ -3,6 +3,7 @@ DIRNAME=$(shell pwd)
 default: containers/chp_seg.sif chp_seg.sh
 
 containers/chp_seg.sif:
+	mkdir -p containers
 	scripts/build_image.sh
 
 chp_seg.sh:
